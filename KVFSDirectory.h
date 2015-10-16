@@ -43,7 +43,7 @@ public:
 	handle(0) {}
   KVFSDirectory(uint64_t fsId, const std::string& parent_dir_name,
                 const std::string& dir_name, KVFSMetaData metadata,
-				uint64_t handle) :
+		uint64_t handle) :
 					KVFSObject(fsId, parent_dir_name, dir_name, KVFS_DIRECTORY),
 					meta(metadata),
 					handle(handle) {}
@@ -117,7 +117,7 @@ public:
   }
 
   virtual void listDirectory(KVFSDirectoryEntry* entries,
-		                     uint64_t* entryCount,
+	                     uint64_t* entryCount,
 							 KVStore* store,
 							 void* fsHandle) {
 	  std::string absolutePath = (parent == name) ? parent : (parent + name);

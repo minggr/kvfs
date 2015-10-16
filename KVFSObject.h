@@ -23,7 +23,7 @@ class KVFSObject {
 public:
     KVFSObject();
     KVFSObject(uint64_t fsId, std::string parent, std::string name,
-                KVFSEntryType type):
+               KVFSEntryType type):
                 	fsId(fsId), parent(parent), name(name), type(type) {}
     KVFSObject(const KVFSObject& kvFSObject)
     :fsId(kvFSObject.fsId)
